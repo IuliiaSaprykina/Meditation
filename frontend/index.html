@@ -4,13 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
 </head>
 <body>
     <h1>Meditation Cube</h1> 
+
+    <form action="http://localhost:3000/users" method="post">
+        <label>Create a new user: </label>
+        <input type="text" name="name" placeholder="Enter name">
+        <input type="submit" value="Create user">
+    </form>
+    <p></p>
+    <form action="http://localhost:3000/user_books" method="post">
+        <label for="">Select your username and a book to add to your list</label>
+        <select id="user-select" name="user_id"></select>
+        <select id="book-select" name="book_id"></select>
+        <input type="submit" value="Add book to your list">
+    </form>
+    <p></p>
     <form action="explore.html">
         <input type="submit" value="Explore Meditation" />
     </form>
+
     
 </body>
 </html>
