@@ -1,2 +1,2 @@
 # Meditation
-Welcome to Meditation 
+Welcome to Meditation App!
