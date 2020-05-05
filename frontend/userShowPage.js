@@ -5,7 +5,9 @@ const userDataSelect = document.querySelector('.user-data')
 const bookListSelect = document.querySelector('.book-list')
 const bookNewLineSelect = document.querySelector('#book-new-line')
 const bookListDeleteSelect = document.querySelector('#book-select')
-console.log("select for delete: ", bookListDeleteSelect)
+const bookDeleteForm = document.querySelector('.delete-books > form') //grabbing first form that is a direct child of the div class "delete-books"
+bookDeleteForm.action = `http://localhost:3000/user_books/${user_id}`
+console.log("book delete form", bookDeleteForm)
 
 
 console.log(bookNewLineSelect)
@@ -67,7 +69,7 @@ function displayDeleteOptions(user){
     bookList.forEach (book => {
         const bookOption = document.createElement('option');
         bookOption.innerText = book.title
-        bookOption.value = book
+        bookOption.value = book.id
         bookListDeleteSelect.append(bookOption)
     })
     return user;
