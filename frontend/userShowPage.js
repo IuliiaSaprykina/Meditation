@@ -23,9 +23,13 @@ function parseJSON(response){
 }
 
 function displayUser(user){
+
+    const hspan = document.createElement('span')
+    hspan.innerText = `${user.name}'s Page`;
     const h1 = document.createElement('h1');
-    h1.innerText = `${user.name}'s Page`;
+    h1.appendChild(hspan)
     userDataSelect.append(h1)
+
     displayBookList(user)
     return user;
 

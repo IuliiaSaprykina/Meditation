@@ -1,6 +1,7 @@
-body{
-    background-image: url("https://img.wallpapersafari.com/desktop/1366/768/99/67/Bplt2F.jpg");
-    background-size: auto;
+html { 
+    background:url("https://img.wallpapersafari.com/desktop/1366/768/99/67/Bplt2F.jpg") center no-repeat;
+    background-size:auto 100%;
+    height: 100%;
 }
 
 h1{
