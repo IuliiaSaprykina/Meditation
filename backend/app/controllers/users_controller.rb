@@ -15,4 +15,10 @@ class UsersController < ApplicationController
         )
         redirect_to "http://localhost:3001/"
     end
+
+    def destroy
+        @user = User.find(params[:id])
+        @user.books.delete_all
+        redirect_to "http://localhost:3001/"
+    end
 end
