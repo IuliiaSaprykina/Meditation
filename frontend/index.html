@@ -8,14 +8,24 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Meditation Cube</h1> 
-    <p></p>
-        <div class="explore-button">
-            <form action="explore.html">
-                <input type="submit" value="Explore Meditation" />
+    <h1>Meditation Cube</h1>
+    <div class="explore-button">
+        <form action="explore.html">
+            <input type="submit" value="Explore Meditation" />
+        </form>
+    </div> 
+    <div class="practice-button">
+            <form action="practicePage.html">
+                <input type="submit" value="Practice Meditation" />
+            </form>
+    </div>
+        
+        <div class="user-page">
+            <form action="userShowPage.html" method="get">
+                <label>Choose user name</label>
+                <select id="user-page-select" name="user_id"></select>
+                <input type="submit" value="Go to user page">
             </form>
         </div>
-
-    
 </body>
 </html>

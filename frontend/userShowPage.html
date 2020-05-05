@@ -14,10 +14,18 @@
         </form>
     </p>
     <div class="user-data"></div>
-    <div class="books-list">
+    <div class="book-list">
         <ul id="book-new-line">
         
         </ul>
+    </div>
+    <div class="delete-books">
+        <form action="" method="POST">
+            <input type="hidden" name="_method" value="delete" />
+            <label>Select book you want to remove from your list</label>
+            <select id="book-select" name="book_id"></select>
+            <input type="submit" value="Remove book from your list">
+        </form>
     </div>
 
 </body>
