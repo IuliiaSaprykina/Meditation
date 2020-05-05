@@ -1,17 +1,56 @@
 
-body{
+html{
     background-image: url("https://images.unsplash.com/photo-1512567522909-4af064e392aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
     color: #a65d5d;
-    background-size: auto;
+    background-repeat: no-repeat;
+    background-color: black;
+    width: 100%;
+    height: auto;
 }
 
+
 h1{
+    position: relative;
+    left: 50%;
     font-size: 40px;
-    padding-left: 250px;
 }
 
 .books-data{
     width: 60%;
     display: inline-block;
     margin: 5px;
+    bottom: 100px;
+}
+
+.new-user{
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    margin-top: 5em;
+}
+
+.new-user-books{
+    position: absolute;
+    top: 200px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    margin-top: 5em;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    padding-right: 230px;
+    padding-top: 50px;
+}
+}
+
+.user-page{
+    position: absolute;
+    top: 350px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    margin-top: 5em;
 }
