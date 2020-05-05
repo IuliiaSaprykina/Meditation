@@ -19,7 +19,8 @@
         </ul>
     </div>
     <div class="delete-books">
-        <form action="http://localhost:3000/users" method="GET">
+        <form action="" method="POST">
+            <input type="hidden" name="_method" value="delete" />
             <label>Select book you want to remove from your list</label>
             <select id="book-select" name="book_id"></select>
             <input type="submit" value="Remove book from your list">
