@@ -1,0 +1,27 @@
+body{
+    background-image: url("https://img.wallpapersafari.com/desktop/1366/768/99/67/Bplt2F.jpg");
+}
+
+h1{
+    direction: rtl;
+    margin: 5rem;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 26px;
+    letter-spacing: 1.6px;
+    word-spacing: 2.6px;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: underline solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: none;
+}
+
+label{
+    color: white;
+}
+
+.new-user{
+    padding-left: 38rem;
+}
+
