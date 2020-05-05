@@ -1,3 +1,4 @@
+
 html { 
     background:url("https://img.wallpapersafari.com/desktop/1366/768/99/67/Bplt2F.jpg") center no-repeat;
     background-size:auto 100%;
@@ -5,7 +6,8 @@ html {
 }
 
 h1{
-    direction: rtl;
+    position: relative;
+    left: 50%;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 50px;
     letter-spacing: 1.6px;
@@ -28,7 +30,7 @@ label{
 
 .explore-button{
     position: relative;
-    left: 480px;
+    left: 50%;
     width: 200px;
 }
 
@@ -44,3 +46,30 @@ label{
     padding-right: 10px;
     padding-left: 10px;
 }
+
+.practice-button input[type="submit"]{
+    margin: 1em;
+    font-size: 40px;
+    color: white;
+    background: #cd954aa6;
+    border: 2px solid rgb(37, 34, 34);
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.practice-button{
+    position: relative;
+    left: 50%;
+    width: 200px;
+}
+
+.user-page{
+    position: absolute;
+    bottom: 60px;
+    left: 70%;
+
+}
+
