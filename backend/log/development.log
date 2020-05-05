@@ -6214,3 +6214,957 @@ Processing by UsersController#show as */*
 Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1965)
 
 
+Started GET "/users" for ::1 at 2020-05-05 17:16:35 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 9.7ms | ActiveRecord: 2.7ms | Allocations: 6311)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:16:43 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:16:43 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1380)
+
+
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.9ms | Allocations: 5566)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:16:43 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:16:47 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1360)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:16:47 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1343)
+
+
+Started GET "/users/1" for ::1 at 2020-05-05 17:16:51 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "user_books" ON "books"."id" = "user_books"."book_id" WHERE "user_books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.6ms | Allocations: 11153)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:17:01 -0600
+Started GET "/books" for ::1 at 2020-05-05 17:17:01 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Processing by BooksController#index as */*
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1620)
+
+
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1274)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:17:01 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:17:32 -0600
+Started GET "/books" for ::1 at 2020-05-05 17:17:32 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by BooksController#index as */*
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 1902)
+
+
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.3ms | Allocations: 1876)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:17:32 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:17:34 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:17:34 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1350)
+
+
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 1532)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:17:34 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:18:06 -0600
+Started GET "/books" for ::1 at 2020-05-05 17:18:06 -0600
+Processing by UsersController#index as */*
+Processing by BooksController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 2066)
+
+
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 2291)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:18:06 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:18:08 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Started GET "/users" for ::1 at 2020-05-05 17:18:08 -0600
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 1357)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1343)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:18:08 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:19:43 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Started GET "/users" for ::1 at 2020-05-05 17:19:43 -0600
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.5ms | Allocations: 1105)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 1473)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:19:43 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:19:45 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:19:45 -0600
+Processing by UsersController#index as */*
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 40ms (Views: 39.8ms | ActiveRecord: 0.1ms | Allocations: 1069)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 46ms (Views: 45.8ms | ActiveRecord: 0.2ms | Allocations: 2691)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:19:45 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:19:47 -0600
+Processing by BooksController#index as */*
+Started GET "/users" for ::1 at 2020-05-05 17:19:47 -0600
+Processing by UsersController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 2485)
+
+
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 2447)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:19:47 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:19:51 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:19:51 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 1504)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:19:51 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:19:53 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:19:53 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 2411)
+
+
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 1761)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:19:53 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:19:55 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:19:55 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 1499)
+
+
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 1734)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:19:55 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:20:20 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:20:20 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 1681)
+
+
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 1989)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:20:20 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:21:58 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Started GET "/books" for ::1 at 2020-05-05 17:21:58 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 2208)
+
+
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 1548)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:21:58 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:22:12 -0600
+Processing by UsersController#index as */*
+Started GET "/books" for ::1 at 2020-05-05 17:22:12 -0600
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1956)
+
+
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:22:12 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:22:14 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 1369)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:22:14 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms | Allocations: 1343)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:22:14 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:22:15 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1212)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:22:15 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Started GET "/books" for ::1 at 2020-05-05 17:22:15 -0600
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1634)
+
+
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:22:16 -0600
+Started GET "/books" for ::1 at 2020-05-05 17:22:16 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 1617)
+
+
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 2939)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:22:16 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:23:43 -0600
+Started GET "/books" for ::1 at 2020-05-05 17:23:43 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1343)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:23:43 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:23:44 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1089)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:23:44 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 1343)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:23:44 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:04 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 1089)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:24:04 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1343)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:04 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:08 -0600
+Processing by BooksController#index as */*
+Started GET "/users" for ::1 at 2020-05-05 17:24:08 -0600
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 1561)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1343)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:08 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:10 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:24:10 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.2ms | Allocations: 1346)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:10 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:12 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:24:12 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1343)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:12 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:14 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:24:14 -0600
+Processing by BooksController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 2029)
+
+
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 2341)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:14 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:16 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (2.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 2.0ms | Allocations: 1392)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:24:16 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Started GET "/books" for ::1 at 2020-05-05 17:24:16 -0600
+Processing by BooksController#index as */*
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 2132)
+
+
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 1776)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:22 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:24:22 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 1568)
+
+
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:22 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:23 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:24:23 -0600
+Started GET "/books" for ::1 at 2020-05-05 17:24:23 -0600
+Processing by BooksController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1389)
+
+
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms | Allocations: 2504)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:29 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:24:29 -0600
+Processing by UsersController#index as */*
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 1785)
+
+
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 2397)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:29 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:24:33 -0600
+Started GET "/books" for ::1 at 2020-05-05 17:24:33 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 2452)
+
+
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1924)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:24:33 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:25:11 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:25:11 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by BooksController#index as */*
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1512)
+
+
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 1919)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:25:11 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:25:34 -0600
+Started GET "/books" for ::1 at 2020-05-05 17:25:34 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 1612)
+
+
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 2363)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:25:34 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:25:54 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1343)
+
+
+Started GET "/users/1" for ::1 at 2020-05-05 17:25:59 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "user_books" ON "books"."id" = "user_books"."book_id" WHERE "user_books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 1958)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:27:02 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1343)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:28:41 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:28:41 -0600
+Processing by BooksController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 1925)
+
+
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 2453)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:28:41 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started POST "/users" for ::1 at 2020-05-05 17:29:07 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Damon"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Damon"], ["created_at", "2020-05-05 23:29:07.666465"], ["updated_at", "2020-05-05 23:29:07.666465"]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://localhost:3001/
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms | Allocations: 2367)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:29:07 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1464)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:29:20 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1464)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:29:26 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:29:26 -0600
+Processing by BooksController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 2042)
+
+
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 2717)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:29:26 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started POST "/user_books" for ::1 at 2020-05-05 17:29:35 -0600
+Processing by UserBooksController#create as HTML
+  Parameters: {"user_id"=>"6", "book_id"=>"13"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_books_controller.rb:13:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:13:in `create'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:13:in `create'
+  [1m[36mUserBook Create (1.0ms)[0m  [1m[32mINSERT INTO "user_books" ("user_id", "book_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 6], ["book_id", 13], ["created_at", "2020-05-05 23:29:35.841080"], ["updated_at", "2020-05-05 23:29:35.841080"]]
+  ↳ app/controllers/user_books_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_books_controller.rb:13:in `create'
+Redirected to http://localhost:3001/
+Completed 302 Found in 32ms (ActiveRecord: 2.5ms | Allocations: 8168)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:29:35 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 1464)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:29:37 -0600
+Started GET "/books" for ::1 at 2020-05-05 17:29:37 -0600
+Processing by UsersController#index as */*
+Processing by BooksController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1644)
+
+
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 2765)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:29:37 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1066)
+
+
+Started GET "/users/1" for ::1 at 2020-05-05 17:29:39 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "user_books" ON "books"."id" = "user_books"."book_id" WHERE "user_books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 1930)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:29:41 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1464)
+
+
+Started GET "/users/6" for ::1 at 2020-05-05 17:29:45 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "user_books" ON "books"."id" = "user_books"."book_id" WHERE "user_books"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1821)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:29:49 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1464)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:29:51 -0600
+Started GET "/users" for ::1 at 2020-05-05 17:29:51 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Processing by UsersController#index as */*
+  ↳ app/controllers/books_controller.rb:5:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 1512)
+
+
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 1855)
+
+
+Started GET "/books" for ::1 at 2020-05-05 17:29:51 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:29:56 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 1464)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:33:33 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1464)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:33:34 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1464)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:36:36 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 1464)
+
+
+Started GET "/users" for ::1 at 2020-05-05 17:36:36 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1464)
+
+
+Started GET "/users/1" for ::1 at 2020-05-05 17:36:39 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "user_books" ON "books"."id" = "user_books"."book_id" WHERE "user_books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1930)
+
+
+Started GET "/users/1" for ::1 at 2020-05-05 17:36:40 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "user_books" ON "books"."id" = "user_books"."book_id" WHERE "user_books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.6ms | Allocations: 1930)
+
+
