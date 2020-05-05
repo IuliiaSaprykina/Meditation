@@ -1,12 +1,12 @@
 body{
     background-image: url("https://img.wallpapersafari.com/desktop/1366/768/99/67/Bplt2F.jpg");
+    background-size: auto;
 }
 
 h1{
     direction: rtl;
-    margin: 5rem;
     font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 26px;
+    font-size: 50px;
     letter-spacing: 1.6px;
     word-spacing: 2.6px;
     color: #FFFFFF;
@@ -25,3 +25,21 @@ label{
     padding-left: 38rem;
 }
 
+.explore-button{
+    position: relative;
+    left: 480px;
+    width: 200px;
+}
+
+.explore-button input[type="submit"]{
+    margin: 1em;
+    font-size: 40px;
+    color: white;
+    background: #cd954aa6;
+    border: 2px solid rgb(37, 34, 34);
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
