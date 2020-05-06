@@ -31,7 +31,6 @@ function displayBookData(books){
         p2.href = book.link_url;
         p2.target = "_blank"
 
-        // console.log(p2)
         bookDataSelect.appendChild(h2)
         bookDataSelect.append(p1, p2)
     })

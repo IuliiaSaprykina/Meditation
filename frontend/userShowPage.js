@@ -5,8 +5,10 @@ const userDataSelect = document.querySelector('.user-data')
 const bookListSelect = document.querySelector('.book-list')
 const bookNewLineSelect = document.querySelector('#book-new-line')
 const bookListDeleteSelect = document.querySelector('#book-select')
+const userUpdateForm = document.querySelector('.update-user > form')
 const bookDeleteForm = document.querySelector('.delete-books > form') //grabbing first form that is a direct child of the div class "delete-books"
 bookDeleteForm.action = `http://localhost:3000/user_books/${user_id}`
+userUpdateForm.action = `http://localhost:3000/users/${user_id}`
 console.log("book delete form", bookDeleteForm)
 
 
