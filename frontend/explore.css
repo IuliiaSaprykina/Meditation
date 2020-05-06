@@ -11,8 +11,9 @@ html{
 
 h1{
     position: relative;
-    left: 50%;
+    left: 40%;
     font-size: 40px;
+    color: #5f4b45;
 }
 
 .books-data{
@@ -20,37 +21,26 @@ h1{
     display: inline-block;
     margin: 5px;
     bottom: 100px;
+    background-color: #cdbca954;
+    color: #4a0303;
 }
 
 .new-user{
     position: absolute;
     top: 80px;
-    right: 0;
+    left: 70%;
     width: 200px;
     height: 100px;
     margin-top: 5em;
-}
-
-.new-user-books{
-    position: absolute;
-    top: 200px;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    margin-top: 5em;
-    display: inline-block;
-    vertical-align: middle;
-    float: right;
-    padding-right: 230px;
-    padding-top: 50px;
-}
+    color: #a65d5d;
 }
 
 .user-page{
     position: absolute;
-    top: 350px;
-    right: 0;
+    top: 200px;
+    left: 70%;
     width: 200px;
     height: 100px;
     margin-top: 5em;
+    color: #a65d5d;
 }
