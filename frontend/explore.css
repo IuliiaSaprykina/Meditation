@@ -4,13 +4,13 @@ html{
     color: #a65d5d;
     background-repeat: no-repeat;
     background-color: black;
-    width: 100%;
-    height: auto;
+    background-position: center;
+    height: 100%;
 }
 
 
 h1{
-    position: relative;
+    position: absolute;
     left: 40%;
     font-size: 40px;
     color: #5f4b45;
@@ -23,6 +23,7 @@ h1{
     bottom: 100px;
     background-color: #cdbca954;
     color: #4a0303;
+    margin-block-start: 100px;
 }
 
 .new-user{

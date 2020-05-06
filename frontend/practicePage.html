@@ -8,36 +8,25 @@
     <link rel="stylesheet" href="practicePage.css">
 </head>
 <body>
-    <h1>Welcome to Practice</h1>
-    <p>
+    <header>
         <form action="http://localhost:3001/index">
-            <input type="submit" value="Return to Main Page"/>
+            <input class="return-button" type="submit" value="Return to Main Page"/>
         </form>
-    </p>
-
+    </header>
+    <h1>Welcome to Practice</h1>
+    <h3>Click an option below to view meditation music or guided meditation video</h3>
+    <h3>Note that eaach time you visit or refresh the page, you will get new videos</h3>
+    <div class="container">
     <button class="accordion">Music</button>
         <div class="music">
             <iframe width="854" height="480" src="">
         </iframe>
     </div>
-
     <button class="accordion">Guided Meditation</button>
         <div class="video">
             <iframe width="854" height="480" src="">
             </iframe>
         </div>
-    
-    <!-- <div class="music">
-        <h3>Meditation Music: </h3>
-        <iframe width="854" height="480" src="">
-        </iframe>
     </div>
-    <div class="video">
-        <h3>Meditation Guide:</h3>
-        <iframe width="854" height="480" src="">
-        </iframe>
-    </div>  -->
-    
-    
 </body>
 </html>

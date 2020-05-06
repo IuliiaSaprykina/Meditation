@@ -1,24 +1,31 @@
 
 html { 
-    background:url("https://img.wallpapersafari.com/desktop/1366/768/99/67/Bplt2F.jpg") center no-repeat;
-    background-size:auto 100%;
+    background:url("https://img.wallpapersafari.com/desktop/1366/768/99/67/Bplt2F.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: black;
     height: 100%;
+}
+
+.center-content{
+    position: absolute;
+    left: 50%;
 }
 
 h1{
     position: relative;
-    left: 50%;
-    /* font-family: "Comic Sans MS", cursive, sans-serif; */
-    font-size: 50px;
-    letter-spacing: 1.6px;
-    word-spacing: 2.6px;
-    color: #FFFFFF;
-    font-weight: 700;
-    text-decoration: underline solid rgb(68, 68, 68);
-    /* font-style: italic; */
-    font-variant: normal;
-    text-transform: none;
-}
+    left: -15%;
+    background: url(https://image.freepik.com/free-photo/beautiful-colorful-sunset_1048-2416.jpg) -80px -80px;
+    color: red;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    font-size: 100px;
+    font-family: arial, helvetica;
+    width: 600px;
+    text-align: center;
+  }
+
 
 label{
     color: white;
@@ -29,8 +36,6 @@ label{
 }
 
 .explore-button{
-    position: relative;
-    left: 50%;
     width: 200px;
 }
 
@@ -61,8 +66,6 @@ label{
 }
 
 .practice-button{
-    position: relative;
-    left: 50%;
     width: 200px;
 }
 
@@ -70,6 +73,6 @@ label{
     position: absolute;
     bottom: 60px;
     left: 70%;
-
+    color: white
 }
 
