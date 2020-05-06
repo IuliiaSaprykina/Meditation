@@ -7168,3 +7168,283 @@ Processing by UsersController#show as */*
 Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.6ms | Allocations: 1930)
 
 
+Started GET "/users" for ::1 at 2020-05-05 19:56:17 -0600
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 0.9ms | Allocations: 6014)
+
+
+Started GET "/users" for ::1 at 2020-05-05 19:56:34 -0600
+Started GET "/books" for ::1 at 2020-05-05 19:56:34 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 1499)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 1.1ms | Allocations: 5634)
+
+
+Started GET "/books" for ::1 at 2020-05-05 19:56:34 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started GET "/users/3" for ::1 at 2020-05-05 19:57:27 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "user_books" ON "books"."id" = "user_books"."book_id" WHERE "user_books"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 47ms (Views: 18.8ms | ActiveRecord: 2.6ms | Allocations: 7935)
+
+
+Started GET "/users" for ::1 at 2020-05-05 19:57:32 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1494)
+
+
+Started GET "/books" for ::1 at 2020-05-05 19:58:31 -0600
+Started GET "/users" for ::1 at 2020-05-05 19:58:31 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1071)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1603)
+
+
+Started GET "/books" for ::1 at 2020-05-05 19:58:31 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1081)
+
+
+Started POST "/user_books" for ::1 at 2020-05-05 19:59:34 -0600
+Processing by UserBooksController#create as HTML
+  Parameters: {"user_id"=>"1", "book_id"=>"15"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_books_controller.rb:13:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:13:in `create'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:13:in `create'
+  [1m[36mUserBook Create (0.8ms)[0m  [1m[32mINSERT INTO "user_books" ("user_id", "book_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["book_id", 15], ["created_at", "2020-05-06 01:59:34.315622"], ["updated_at", "2020-05-06 01:59:34.315622"]]
+  ↳ app/controllers/user_books_controller.rb:13:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_books_controller.rb:13:in `create'
+Redirected to http://localhost:3001/
+Completed 302 Found in 14ms (ActiveRecord: 2.1ms | Allocations: 7878)
+
+
+Started GET "/users" for ::1 at 2020-05-05 19:59:34 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1464)
+
+
+Started GET "/users/2" for ::1 at 2020-05-05 19:59:39 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "user_books" ON "books"."id" = "user_books"."book_id" WHERE "user_books"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.6ms | Allocations: 1945)
+
+
+Started POST "/user_books/2" for ::1 at 2020-05-05 19:59:58 -0600
+Processing by UserBooksController#destroy_book_join as HTML
+  Parameters: {"book_id"=>"15", "id"=>"2"}
+  [1m[36mUserBook Load (0.3ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" WHERE "user_books"."book_id" = ? AND "user_books"."user_id" = ? LIMIT ?[0m  [["book_id", 15], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:21:in `destroy_book_join'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_books_controller.rb:22:in `destroy_book_join'
+  [1m[36mUserBook Destroy (1.2ms)[0m  [1m[31mDELETE FROM "user_books" WHERE "user_books"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/user_books_controller.rb:22:in `destroy_book_join'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_books_controller.rb:22:in `destroy_book_join'
+Redirected to http://localhost:3001/userShowPage.html?user_id=2
+Completed 302 Found in 7ms (ActiveRecord: 2.4ms | Allocations: 2352)
+
+
+Started GET "/users/2" for ::1 at 2020-05-05 19:59:58 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "user_books" ON "books"."id" = "user_books"."book_id" WHERE "user_books"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1823)
+
+
+Started GET "/users" for ::1 at 2020-05-05 20:00:00 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1464)
+
+
+Started GET "/users" for ::1 at 2020-05-05 20:03:23 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 1464)
+
+
+Started GET "/books" for ::1 at 2020-05-05 20:11:40 -0600
+Started GET "/users" for ::1 at 2020-05-05 20:11:40 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by BooksController#index as */*
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 1748)
+
+
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 2018)
+
+
+Started GET "/books" for ::1 at 2020-05-05 20:11:40 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/users" for ::1 at 2020-05-05 20:12:17 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1477)
+
+
+Started GET "/users" for ::1 at 2020-05-05 20:12:25 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 1464)
+
+
+Started GET "/users" for ::1 at 2020-05-05 20:12:29 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 1464)
+
+
+Started GET "/users" for ::1 at 2020-05-05 20:12:47 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 1464)
+
+
+Started GET "/books" for ::1 at 2020-05-05 20:13:45 -0600
+Started GET "/users" for ::1 at 2020-05-05 20:13:45 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 2197)
+
+
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 2319)
+
+
+Started GET "/books" for ::1 at 2020-05-05 20:13:46 -0600
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/users/1" for ::1 at 2020-05-05 20:13:48 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "user_books" ON "books"."id" = "user_books"."book_id" WHERE "user_books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 2065)
+
+
+Started POST "/user_books/1" for ::1 at 2020-05-05 20:14:49 -0600
+Processing by UserBooksController#destroy_book_join as HTML
+  Parameters: {"book_id"=>"15", "id"=>"1"}
+  [1m[36mUserBook Load (0.3ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books" WHERE "user_books"."book_id" = ? AND "user_books"."user_id" = ? LIMIT ?[0m  [["book_id", 15], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_books_controller.rb:21:in `destroy_book_join'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_books_controller.rb:22:in `destroy_book_join'
+  [1m[36mUserBook Destroy (0.4ms)[0m  [1m[31mDELETE FROM "user_books" WHERE "user_books"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/user_books_controller.rb:22:in `destroy_book_join'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_books_controller.rb:22:in `destroy_book_join'
+Redirected to http://localhost:3001/userShowPage.html?user_id=1
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms | Allocations: 2207)
+
+
+Started GET "/users/1" for ::1 at 2020-05-05 20:14:49 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "user_books" ON "books"."id" = "user_books"."book_id" WHERE "user_books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1930)
+
+
+Started GET "/users" for ::1 at 2020-05-05 20:14:52 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 1467)
+
+
+Started GET "/users/1" for ::1 at 2020-05-05 20:15:03 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "user_books" ON "books"."id" = "user_books"."book_id" WHERE "user_books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 1930)
+
+
+Started GET "/users" for ::1 at 2020-05-05 20:15:27 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1464)
+
+
+Started GET "/users" for ::1 at 2020-05-05 20:19:35 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.9ms | Allocations: 1464)
+
+
