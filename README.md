@@ -8,88 +8,74 @@ Explore and practice meditation with no distractions
 * [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
-* [Inspiration](#inspiration)
 * [Contact](#contact)
 
 ## General info
-During this crazy pandemic, us avid hikers and outdoor enthusiasts could find ourselves going stir crazy.
-
-In times, where everyone and their mother are heading to the outdoors to escape cabin fever, what is a hiker to do to find some peace and quiet on the trail?
-
-Trail Less Traveled app helps you find the least busy trail based on your preference of trail crowd level, location, difficulty, length, and elevation.
-Keep calm and hike on while practicing safe social distancing!
+This website will help you find meditation resources, but without distractions. Youtube and similar websites have many distractions meant to keep you on their site like ads, reccomended videos, auto-playing videos and so on. Our site takes meditation related media and allows you to relax without all the unnecessary extra stimulus. 
 
 ## Intro Video
-[Trail less traveled on YouTube](https://youtu.be/9CrYg-8Soyo)
+[Meditation Cube on YouTube - coming soon](link)
 
 ## Technologies
-* ActiveRecord - version 6.0
-* Rake version 13.0
-* Ruby - version 2.6.1p33
-* Sinatra-activerecord - version 2.0
+* ActiveRecord - version 6.0.2.2
+* Rails - version 6.0.2 
+* Ruby - version 2.6.1 and 2.6.5
 * SQLite3 - version 1.4
 
 ## Setup
 To run this project, install it locally by cloning the GitHub repository and typing:
-```ruby
-ruby runner.rb
-```
+Open two command terminals. 
+On the first one, navigate to the backend folder and run 
+```rails s```
+On the second terminal, navigate to the frontend folder and run
+```lite-server```
 
 ## Code Examples
-```ruby
- def user_path
-        system "clear"
-        banner
-        puts "Hi #{hiker.name}!"
-        choices = ["Find a hiking trail", "Leave a review for a trail", "See all of my reviews", "See all of the trails I have reviewed", "Exit this app"]
-        user_path_input = $prompt.select("\nWhat do you want to do?", choices)
+```fetch("http://localhost:3000/books")
+    .then(parseJSON)
+    .then(books => displayBookData(books))
+
+function parseJSON(response){
+    return response.json()
+}
+
+function displayBookData(books){
+    console.log(books)
+    books.forEach(book => {
+        const h2 = document.createElement('h2');
+        const p1 = document.createElement('p')
+        const p2 = document.createElement('a')
     
-        case user_path_input
-            when "Find a hiking trail"  
-                system "clear"
-                banner
-                collect_hiker_choices_trail         
-            when "Leave a review for a trail"
-                system "clear"
-                banner
-                collect_hiker_inputs_review
-            when "See all of my reviews"
-                system "clear"
-                banner
-                see_all_reviews   
-            when "See all of the trails I have reviewed"
-                system "clear"
-                banner
-                see_all_trails
-        else
-            system "clear"
-            goodbye
-            puts "Thank you for using our App. Have a great day!"
-        end
-    end
+        h2.innerText = book.title
+        p1.innerText = `Author: ${book.author}
+        Description: ${book.description}
+        `
+        let link = document.createTextNode("Read this book");
+        
+        p2.appendChild(link);
+        p2.title = "Read this book";
+        p2.href = book.link_url;
+        p2.target = "_blank"
+
+        bookDataSelect.appendChild(h2)
+        bookDataSelect.append(p1, p2)
+    })
+}
 ```
 
 ## Features
-* Browse trails by trail's current traffic, location, difficulty, length,and elevation.
-* Leave a review
-* See all of user's reviews
-* Edit and delete reviews
-* See all of the trails user has visited
-
-To-do-list:
-* Add API functionality to access hiking trail information and cell phone data to track traffic on respective trail
-* Integrate matching photos to trail
+* Browse writings about how to meditate in the form of PDFs
+* Watch meditation music or guided meditation videos
+* Create a list of books you want to read 
+* Remove books from your list
+* Create a new user
+* Update user name
 
 ## Status
-Project is finished with option to expand functionality and DRY out code. 
-
-## Inspiration
-The inspiration for Trail Less Traveled came from the current stay at home order during COVID-19 pandemic.
-So many people are heading outdoors to escape cabin fever only to find themselves on a crowded trail. 
-To help people to get some much needed exercise while practicing safe social distancing, we created an app that helps people find a trail with the lowest crowd level. 
+Project is finished. 
 
 ## Contact
-Created by [Lisa Jung](https://www.linkedin.com/in/lisa-jung-23304b53/) and [Iuliia Saprykina](https://www.linkedin.com/in/iuliia-saprykina-ab3351100)
+Created by [Hannah Drury](https://www.linkedin.com/in/hannah-drury-042a8391/) and [Iuliia Saprykina](https://www.linkedin.com/in/iuliia-saprykina-ab3351100)
 
 Feel free to contact us!!! 
 
