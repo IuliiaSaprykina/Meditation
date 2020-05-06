@@ -1,5 +1,9 @@
 html { 
-    background:url("https://wallpapercave.com/wp/wp3431939.jpg") center no-repeat;
+    /* background:url("https://wallpapercave.com/wp/wp3431939.jpg") right top no-repeat; */
+    background: linear-gradient(to left, transparent, 20%, black 70%, black),
+      url("https://wallpapercave.com/wp/wp3431939.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     background-color: black;
@@ -8,5 +12,37 @@ html {
 h1 {
     display: table; /* keep the background color wrapped tight */
     margin: 0px auto 0px auto; /* keep the table centered */
-    padding:5px;background-color: rgba(225, 225, 225, .8);color: black;
+    padding:5px;
+    /* background-color: rgba(225, 225, 225, .8); */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.delete-books {
+    text-align: left;
+    color: white;
+    font-size: 30px;
+    margin: 200px 100px ;
+}
+
+   input[type=submit] {
+    width: 270px;
+      background-color: white;
+      padding: 13px 10px;
+      border: none;
+      color: black;
+      font-size: 20px;
+  }
+
+.book-list {
+    font-size: 30px;
+    padding-left: 20%;
+    display: table; /* keep the background color wrapped tight */
+    margin: 70px 100px ;
+    padding:5px;background-color: rgba(225, 225, 225, .8);
+}
+
+form {
+    width: max-content;
+    
 }

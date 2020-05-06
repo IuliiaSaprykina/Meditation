@@ -24,11 +24,8 @@ function parseJSON(response){
 
 function pickRandomVideo(videos){
     console.log("video:", videos.items)
-
     let videoArray = videos.items
-
     const randomElement = videoArray[Math.floor(Math.random() * videoArray.length)];
-
     return randomElement
 }
 

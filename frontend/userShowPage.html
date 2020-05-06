@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="userShowPage.css">
 </head>
 <body>
-    <p>
-        <form action="http://localhost:3001/index">
-            <input type="submit" value="Return to Main Page"/>
-        </form>
-    </p>
+    <header >
+        <button class="button1" onclick="location.href='http://localhost:3001/index'" type="button">
+            Return to Main Page
+        </button>
+    </header>
     <div class="user-data"></div>
     <div class="book-list">
         <ul id="book-new-line">
@@ -23,7 +23,8 @@
         <form action="" method="POST">
             <input type="hidden" name="_method" value="delete" />
             <label>Select book you want to remove from your list</label>
-            <select id="book-select" name="book_id"></select>
+            <p></p>
+            <select style=" height:50px; font-size: 20px;" id="book-select" name="book_id"></select>
             <input type="submit" value="Remove book from your list">
         </form>
     </div>
