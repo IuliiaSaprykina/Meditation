@@ -14,7 +14,7 @@ class UserBooksController < ApplicationController
             user_id: params[:user_id],
             book_id: params[:book_id]
         )
-        redirect_to "http://localhost:3001/"
+        redirect_to "http://localhost:3001/explore.html"
     end
 
     def destroy_book_join
