@@ -76,9 +76,7 @@ function displayBookData(books){
 Project is finished. 
 
 ## Contact
-Created by [Hannah Drury](https://www.linkedin.com/in/hannah-drury-042a8391/) and [Iuliia Saprykina](https://www.linkedin.com/in/iuliia-saprykina-ab3351100)
-
-Feel free to contact us!!! 
+Created by [Hannah Drury](https://www.linkedin.com/in/hannah-drury-042a8391/) and [Iuliia Saprykina](https://www.linkedin.com/in/iuliia-saprykina-ab3351100) 
 
 
 
