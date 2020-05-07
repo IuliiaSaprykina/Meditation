@@ -21,9 +21,16 @@
             </form>
     </div>
     </div>
+    <div class="new-user">
+        <form action="http://localhost:3000/users" method="post">
+            <label>Create a new user: </label>
+            <input type="text" name="name" placeholder="Enter name">
+            <input type="submit" value="Create user">
+        </form>
+    </div>
         <div class="user-page">
             <form action="userShowPage.html" method="get">
-                <label>Choose user name</label>
+                <label>Choose user name:</label>
                 <select id="user-page-select" name="user_id"></select>
                 <input type="submit" value="Go to user page">
             </form>

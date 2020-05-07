@@ -20,24 +20,17 @@ h1{
     width: 55%;
     display: table;
     /* margin: 5px; */
-    margin: 50px;
-    margin-left: 10%;
-    bottom: 100px;
+    /* margin: 50px; */
+    /* margin-left: 250px; */
+    /* bottom: 100px; */
     background-color: #cdbca954;
     color: #4a0303;
-    margin-block-start: 100px;
+    margin-block-start: 50px;
     padding: 20px;
+    position: relative;
+    left: 25%;
 }
 
-.new-user{
-    position: absolute;
-    top: 80px;
-    left: 70%;
-    width: 200px;
-    height: 100px;
-    margin-top: 5em;
-    color: #5f4b45;
-}
 
 .user-page{
     position: absolute;

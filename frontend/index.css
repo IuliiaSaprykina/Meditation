@@ -10,7 +10,7 @@ html {
 
 .center-content{
     position: absolute;
-    left: 50%;
+    left: 40%;
 }
 
 h1{
@@ -25,15 +25,12 @@ h1{
     font-family: arial, helvetica;
     width: 600px;
     text-align: center;
+    margin: 30px;
   }
 
 
 label{
     color: white;
-}
-
-.new-user{
-    padding-left: 38rem;
 }
 
 .explore-button{
@@ -72,11 +69,11 @@ label{
 
 .user-page{
     position: absolute;
-    bottom: 60px;
-    left: 70%;
+    bottom: 40px;
+    left: 65%;
     color: white;
     height:46px; 
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 5px;
 }
 
@@ -85,13 +82,31 @@ form {
 }
 
 .user-page :nth-child(2){
-    height:46px; 
-    font-size: 20px;
+    height: 30px;
+    font-size: 18px;
     border-radius: 5px;
 }
 .user-page :nth-child(3){
-    height:46px; 
-    font-size: 20px;
+    height: 30px;
+    font-size: 18px;
     border-radius: 5px;
 }
 
+.new-user{
+    position: absolute;
+    bottom: 120px;
+    left: 65%;
+    font-size: 25px;
+}
+
+.new-user :nth-child(3){
+    height: 30px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.new-user :nth-child(2){
+    height: 30px;
+    font-size: 18px;
+    border-radius: 5px;
+}

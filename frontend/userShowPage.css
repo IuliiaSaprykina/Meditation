@@ -20,7 +20,7 @@ h1 {
     text-align: left;
     color: white;
     font-size: 30px;
-    margin: 200px 100px ;
+    margin: 100px 100px ;
 }
    input[type=submit] {
     width: 270px;
@@ -51,10 +51,10 @@ form {
 .update-user :nth-child(1) {
     position: absolute;
     /* margin: -150px auto 0px auto; */
-    margin-top: -150px;
+    margin-top: -50px;
 }
 
-.update-user :nth-child(4){
+.update-user :nth-child(3){
     height:46px; 
     font-size: 20px;
     border-radius: 5px;
