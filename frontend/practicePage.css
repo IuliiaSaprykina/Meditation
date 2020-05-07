@@ -7,31 +7,42 @@ html {
 }
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
+    /* position: relative;
+    left: 50%; */
     background-color: #eee;
     color: #444;
     cursor: pointer;
     padding: 18px;
-    max-width: 854px;
-
-    width: 70%;
+    width: 920px;
+    text-align: center;
     border: line;
     outline: none;
+    transition: 0.4s;
     font-size: larger;
   }
     .container{
+      display: table;
+      /* background-color: rgba(255, 255, 255, 0.6); */
       padding: 30px;
       margin: 0px auto 0px auto; 
-      text-align: center;
+      width: 50px;
       }
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .accordion:hover {
     background-color: rgb(155, 155, 155);
   }
- 
-  iframe {
-    height: 480px;
-    max-width: 840px;
-    width: 70%;
+  /* Style the accordion panel. Note: hidden by default */
+  .music {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+  .video {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
   }
   h1 {
     text-align: center;
