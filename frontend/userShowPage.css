@@ -8,7 +8,7 @@ html {
     width: 100%;
     background-color: black;
 }
-h1 {
+h1 { 
     display: table; /* keep the background color wrapped tight */
     margin: 0px auto 0px auto; /* keep the table centered */
     padding:5px;
@@ -40,3 +40,39 @@ h1 {
 form {
     width: max-content;
 }
+
+.update-user{
+    text-align: left;
+    color: white;
+    font-size: 30px;
+    margin: 0px 100px ;
+}
+
+.update-user :nth-child(1) {
+    position: absolute;
+    /* margin: -150px auto 0px auto; */
+    margin-top: -150px;
+}
+
+.update-user :nth-child(4){
+    height:46px; 
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+/* h2 {
+    margin: 100px, 100px;
+} */
+
+.no-color {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 100px;
+    font-weight: bold;
+    
+}
+
+
+

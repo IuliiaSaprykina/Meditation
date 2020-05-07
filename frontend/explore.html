@@ -32,14 +32,16 @@
                 <select id="book-select" name="book_id"></select>
                 <input type="submit" value="Add book to your list">
             </form>
+
+            <button onclick="myFunction()" id="go-user-page"type="submit">Go to user page</button>
+
+            <script>
+                function myFunction() {
+                    let userid = document.getElementById("user-select").value
+                    window.location.href = `http://localhost:3001/userShowPage.html?user_id=${userid}`;
+                }
+            </script>
         </div>
         <p></p>
-        <div class="user-page">
-            <form action="userShowPage.html" method="get">
-                <label>Choose user name</label>
-                <select id="user-page-select" name="user_id"></select>
-                <input type="submit" value="Go to user page">
-            </form>
-        </div>
     </body>
-    </html>
+    </html> 

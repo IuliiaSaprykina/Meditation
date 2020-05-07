@@ -74,6 +74,24 @@ label{
     position: absolute;
     bottom: 60px;
     left: 70%;
-    color: white
+    color: white;
+    height:46px; 
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+form {
+    width: max-content;
+}
+
+.user-page :nth-child(2){
+    height:46px; 
+    font-size: 20px;
+    border-radius: 5px;
+}
+.user-page :nth-child(3){
+    height:46px; 
+    font-size: 20px;
+    border-radius: 5px;
 }
 
