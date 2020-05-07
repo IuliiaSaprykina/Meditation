@@ -14,7 +14,7 @@ Explore and practice meditation with no distractions
 This website will help you find meditation resources, but without distractions. Youtube and similar websites have many distractions meant to keep you on their site like ads, reccomended videos, auto-playing videos and so on. Our site takes meditation related media and allows you to relax without all the unnecessary extra stimulus. 
 
 ## Intro Video
-[Meditation Cube on YouTube - coming soon](https://www.youtube.com/watch?v=c7EamBTS1uM)
+[Meditation Cube on YouTube](https://www.youtube.com/watch?v=c7EamBTS1uM)
 
 ## Technologies
 * ActiveRecord - version 6.0.2.2
