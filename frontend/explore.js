@@ -13,9 +13,7 @@ function parseJSON(response){
     return response.json()
 }
 
-function displayBookData(books){
-    console.log(books)
-    books.forEach(book => {
+function displayBookData(books){    books.forEach(book => {
         const h2 = document.createElement('h2');
         const p1 = document.createElement('p')
         const p2 = document.createElement('a')
@@ -36,12 +34,9 @@ function displayBookData(books){
     })
 }
 
-
-
 fetch(usersURL)
     .then(parseJSON)
     .then(users => displayUsers(users))
-    .then(users => displayUsersPageOptions(users))
     
 fetch(booksURL)
     .then(parseJSON)
@@ -65,32 +60,18 @@ function parseJSON(response){
     return response.json()
 }
 
-function displayUsersOptions(user){
-    console.log("user: ", user)
-    
+function displayUsersOptions(user){    
     const nameOption = document.createElement('option')
     nameOption.innerText = user.name
     nameOption.value = user.id
-    console.log("name select: ", nameSelect)
 
     nameSelect.append(nameOption)
 }
 
 function displayBooksOptions(book){
-    console.log("book: ", book)
     
     const bookOption = document.createElement('option')
     bookOption.innerText = book.title
     bookOption.value = book.id
     bookSelect.append(bookOption)
-}
-
-function displayUsersPageOptions(users){
-    users.forEach (user => {
-        const nameOption = document.createElement('option')
-        nameOption.innerText = user.name
-        nameOption.value = user.id
-    
-        userPageSelect.append(nameOption)
-    })
 }

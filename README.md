@@ -31,7 +31,8 @@ On the second terminal, navigate to the frontend folder and run
 ```lite-server```
 
 ## Code Examples
-```fetch("http://localhost:3000/books")
+```
+fetch("http://localhost:3000/books")
     .then(parseJSON)
     .then(books => displayBookData(books))
 
