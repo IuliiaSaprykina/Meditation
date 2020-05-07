@@ -16,15 +16,17 @@
     </p>
     <div class="books-data"></div>
         <p></p>
-        <footer>
+        <footer class="container">
             <div class="new-user-books">
                 <form action="http://localhost:3000/user_books" method="post">
                     <label>Select your username and a book to add to your list</label>
                     <select id="user-select" name="user_id"></select>
                     <select id="book-select" name="book_id"></select>
                     <input type="submit" value="Add book to your list">
-                    <button onclick="myFunction()" id="go-user-page"type="submit">Go to user page</button>
                 </form>
+                
+                <button class="item" onclick="myFunction()" id="go-user-page" type="submit">Go to user page</button>
+
                 <script>
                     function myFunction() {
                         let userid = document.getElementById("user-select").value

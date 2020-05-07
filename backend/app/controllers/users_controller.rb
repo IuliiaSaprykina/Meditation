@@ -25,9 +25,8 @@ class UsersController < ApplicationController
         redirect_to "http://localhost:3001/userShowPage.html?user_id=#{params[:id]}" 
     end
 
-    def destroy
-        # byebug
-        #@user = User.find(params[:id])
-        #redirect_to "http://localhost:3001/"
-    end
+    # def destroy
+    #     @user = User.find(params[:id])
+    #     @user.destroy
+    # end
 end

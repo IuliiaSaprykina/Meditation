@@ -19,10 +19,6 @@ h1{
 .books-data{
     width: 55%;
     display: table;
-    /* margin: 5px; */
-    /* margin: 50px; */
-    /* margin-left: 250px; */
-    /* bottom: 100px; */
     background-color: #cdbca954;
     color: #4a0303;
     margin-block-start: 50px;
@@ -43,5 +39,22 @@ h1{
 }
 
 .new-user-books {
-    margin-left: 10%;
+    /* margin-left: 10%; */
+    width: 100%;
+    display: contents;
 }
+
+.container {
+    display: inline-flex; /* or inline-flex */
+  }
+
+  .item {
+    flex-shrink: 4; /* default 1 */
+  }
+
+  footer {
+      /* width: 100%; */
+      margin-left: 25%;
+      /* left: 25%; */
+      margin-top: 100px;
+  }
